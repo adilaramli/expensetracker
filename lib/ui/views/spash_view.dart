@@ -13,20 +13,20 @@ class SpashView extends StatelessWidget {
 
   buildSpashScreen() {
     return SplashScreen(
-        seconds: 3,
+        seconds: 2,
         navigateAfterSeconds: HomeView(),
         title: new Text(
           'Expense Tracker',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
         image: new Image.asset(
-          'assets/icons/wallet.png',
+          'assets/wallet.png',
           height: 100,
           width: 100,
         ),
         backgroundColor: backgroundColor,
         loadingText: Text(
-          'Track your expense in a smart way',
+          'Track your expense in a smart way.',
           style: TextStyle(fontStyle: FontStyle.italic),
         ),
         photoSize: 100.0,

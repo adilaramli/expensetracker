@@ -12,7 +12,7 @@ class EmptyTransactionsWidget extends StatelessWidget {
       children: <Widget>[
         UIHelper.verticalSpaceLarge(),
         Image.asset(
-          'assets/icons/no-money.png',
+          'assets/no-money.png',
           width: 120,
           height: 120,
         ),

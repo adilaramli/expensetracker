@@ -44,8 +44,7 @@ dependencies:
   path_provider: ^1.6.27
   moor_db_viewer: ^2.0.3
   local_auth: ^0.6.3+4
-
-
+  speech_to_text: ^3.1.0
 
 dev_dependencies:
   flutter_test:

@@ -61,7 +61,7 @@ class HomeModel extends BaseModel {
     int monthIndex = months.indexOf(month);
     // color the selected month with
     if (monthIndex == selectedMonthIndex) {
-      return Colors.lightGreenAccent;
+      return Colors.orange;
     } else {
       return Colors.black;
     }

@@ -18,14 +18,11 @@ class HomeView extends StatelessWidget {
     return BaseView<HomeModel>(
       onModelReady: (model) async => await model.init(),
       builder: (context, model, child) => Scaffold(
-        appBar: buildAppBar(model.appBarTitle, model,
-        
-        ),
+        appBar: buildAppBar(model.appBarTitle, model),
         drawer: AppDrawer(context),
         floatingActionButton: Visibility(
           visible: model.show,
           child: AppFAB(model.closeMonthPicker),
-          
         ),
         body: model.state == ViewState.Busy
             ? Center(child: CircularProgressIndicator())

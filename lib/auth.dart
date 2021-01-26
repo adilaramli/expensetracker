@@ -5,8 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:local_auth/auth_strings.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:expensetracker/ui/views/spash_view.dart';
-
-// import 'package:expensetracker/locator.dart';
+import 'package:expensetracker/locator.dart';
 // import 'package:expensetracker/ui/router.dart' ;
 
 class Auth extends StatefulWidget {
@@ -104,8 +103,8 @@ void _startAuth() async {
 
 if (_isAuthenticated) {
   Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => SpashView()));
-  
-  
+ 
+    //Navigator.of(context).pushReplacementNamed('/');
 }
 
 }// end void

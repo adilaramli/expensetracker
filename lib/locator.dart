@@ -7,8 +7,6 @@ import 'package:expensetracker/core/viewmodels/insert_transaction_model.dart';
 import 'package:expensetracker/core/viewmodels/new_transcation_model.dart';
 import 'package:expensetracker/core/viewmodels/piechart_model.dart';
 import 'package:expensetracker/core/viewmodels/reminder_model.dart';
-import 'package:expensetracker/auth.dart';
-
 
 import 'core/services/category_icon_service.dart';
 import 'core/services/moordatabase_service.dart';
@@ -30,7 +28,4 @@ void setupLocator() {
   locator.registerFactory(() => InsertTransactionModel());
   locator.registerFactory(() => PieChartModel());
   locator.registerFactory(() => ReminderModel());
-
-  //FINGERPRINT
-  locator.registerFactory(() => Auth());
 }

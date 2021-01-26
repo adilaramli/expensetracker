@@ -1,14 +1,19 @@
-import 'package:flutter/material.dart ';
+import 'package:flutter/material.dart ' hide Router;
 import 'package:expensetracker/locator.dart';
+import 'package:expensetracker/ui/router.dart';
 import 'package:expensetracker/ui/shared/app_colors.dart';
-import 'package:expensetracker/auth.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
-  runApp(MaterialApp(
-      home: MyApp(),
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: 'Expense Tracker',
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
       brightness: Brightness.light,
@@ -18,22 +23,8 @@ void main() {
       brightness: Brightness.dark,
       primaryColor: backgroundColor,
     ),
-      debugShowCheckedModeBanner: false,
-
-      
-
-    ));
-}
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Auth();
+      initialRoute: '/',
+      onGenerateRoute: Router.generateRoute,
+    );
   }
 }
-

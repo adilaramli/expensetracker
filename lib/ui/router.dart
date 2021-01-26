@@ -10,14 +10,14 @@ import 'package:expensetracker/ui/views/piechart_view.dart';
 import 'package:expensetracker/ui/views/reminder_view.dart';
 import 'package:expensetracker/ui/views/spash_view.dart';
 
-const String initialRoute = "fingerprint";
+const String initialRoute = "//";
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case '//':
-        return MaterialPageRoute(builder: (_) => Auth());
       case '/':
+        return MaterialPageRoute(builder: (_) => Auth());
+      case '//':
         return MaterialPageRoute(builder: (_) => SpashView());
       case 'home':
         return MaterialPageRoute(builder: (_) => HomeView());
